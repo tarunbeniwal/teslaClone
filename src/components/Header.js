@@ -10,9 +10,6 @@ function Header() {
 return (
     
     <Container>
-        <Top>
-            <a id='top' href='/#'>Read Tesla's 2021 Impact Report</a>
-        </Top>
         <Main>
             <a href="/#">
                 <img id='logo' src='\images\logo.svg' alt='TESLA'/>
@@ -32,9 +29,6 @@ return (
                     <CustomClose onClick= {() => setSideBarStatus(false)} />
                 </CloseWrapper>
                 <List>
-                    {products && products.map((product, index)=>(
-                        <li><a key = {index} href='/#'>{product}</a></li>
-                    ))}
                     <li><a href='/#'>Existing Inventory</a></li>
                     <li><a href='/#'>Used Inventory</a></li>
                     <li><a href='/#'>Trade-In</a></li>
@@ -62,16 +56,7 @@ export default Header
 const Container = styled.div`
     position:fixed;
     z-index:1;
-`
-const Top = styled.div`
-    background-color:#fff;
-    width:100vw;
-    text-align:center;
-    padding: 14px;
-    text-decoration:underline;
-    font-size:15px;
-    
-`
+` 
 const Main = styled.div`
     
 
