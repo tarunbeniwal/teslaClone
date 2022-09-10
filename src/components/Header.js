@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-
+import {selectProducts} from '../features/product/productSlice'
+import {useSelector} from 'react-redux'
 
 function Header() {
     const [SideBarStatus, setSideBarStatus] = useState(false);
+    const products = useSelector(selectProducts)
+    console.log(products);
 return (
     
-    <Container>
+    <Container onClick = {() =>setSideBarStatus(true)}>
         <Top>
             <a id='top' href='/#'>Read Tesla's 2021 Impact Report</a>
         </Top>
