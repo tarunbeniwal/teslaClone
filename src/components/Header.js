@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
+import {selectProducts} from "../features/product/productSlice"
+import {useSelector} from 'react-redux'
 
 function Header() {
     const [SideBarStatus, setSideBarStatus] = useState(false);
+    const products = useSelector(selectProducts)
 return (
     
     <Container>
@@ -15,12 +18,9 @@ return (
                 <img id='logo' src='\images\logo.svg' alt='TESLA'/>
             </a>
             <Menu>
-                <p><a href='/#'>Model 3</a></p>
-                <p><a href='/#'>Model Y</a></p>
-                <p><a href='/#'>Model S</a></p>
-                <p><a href='/#'>Model X</a></p>
-                <p><a href='/#'>Solar Roof</a></p>
-                <p><a href='/#'>Solar Panels</a></p>
+                {products && products.map((product, index)=>(
+                        <p><a key = {index} href='/#'>{product}</a></p>
+                ))}
             </Menu>
             <RightMenu>
                 <a href="/#">Shop</a>
@@ -32,6 +32,9 @@ return (
                     <CustomClose onClick= {() => setSideBarStatus(false)} />
                 </CloseWrapper>
                 <List>
+                    {products && products.map((product, index)=>(
+                        <li><a key = {index} href='/#'>{product}</a></li>
+                    ))}
                     <li><a href='/#'>Existing Inventory</a></li>
                     <li><a href='/#'>Used Inventory</a></li>
                     <li><a href='/#'>Trade-In</a></li>

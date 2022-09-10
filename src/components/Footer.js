@@ -20,10 +20,12 @@ function Footer() {
 export default Footer
 
 const Foot = styled.div`
-    
-    padding:30px;
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
     a{
-        
+        font-size:13px;
+        padding:12px;
     }
 
 
