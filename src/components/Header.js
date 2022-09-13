@@ -76,7 +76,7 @@ const Main = styled.div`
     }
     @media(max-width:400px){
         img{
-            margin-left: 100px;
+            margin-left: 115px;
         }
     }
 
