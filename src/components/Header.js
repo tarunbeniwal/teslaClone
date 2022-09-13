@@ -56,10 +56,10 @@ export default Header
 const Container = styled.div`
     position:fixed;
     z-index:1;
+
 ` 
 const Main = styled.div`
     
-
     display:flex;
     min-width: 60px;
     position: fixed;
@@ -69,15 +69,19 @@ const Main = styled.div`
     padding-top:16px;
     left:0;
     right:0;
-    z-index:10000;
 
     img{
         width:120px;
         height:16px;
     }
-
+    @media(max-width:400px){
+        img{
+            margin-left: 100px;
+        }
+    }
 
 `
+
 const Menu = styled.div`
     display:flex;
     align-items: center;
@@ -121,6 +125,9 @@ const RightMenu = styled.div`
         border:none;
         font-size: 14px;
         cursor:pointer;
+        @media (max-width: 400px){
+            display:none;
+        }
     }
 
 `
