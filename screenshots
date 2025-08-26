@@ -1,1 +1,4 @@
 
+git add screenshots/homepage.png
+git commit -m "Added homepage screenshot"
+git push origin main
