@@ -26,4 +26,7 @@ This project helped me strengthen my skills in React, component-based design, an
 Project link: https://tesla-clone-2022.netlify.app/
 
 Screenshots : 
-
+- Web
+  ![Homepage](./Homepage.png)
+- Mobile
+  ![Mobile](./mobile.png)
